@@ -6,3 +6,4 @@ attractions/**/*.d.ts
 *.d.ts.map
 .stylelintcache
 .eslintcache
+build/

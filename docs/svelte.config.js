@@ -1,5 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import autoPreprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-node';
 
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
@@ -18,6 +19,7 @@ const environment = {
 const config = {
   extensions: ['.svelte', ...mdsvexConfig.extensions],
   kit: {
+    adapter: adapter(),
     target: 'body',
     vite: {
       define: environment,
